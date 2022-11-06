@@ -1,0 +1,209 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root{
+    --color-primary:hsl(300, 43%, 22%);
+    --color-pink:hsl(333, 80%, 67%);
+    --color-secondary-dark:hsl(303, 10%, 53%);
+    --color-secondary-light:hsl(300, 24%, 96%);
+    --color-white:hsl(0, 0%, 100%);
+}
+
+html{
+    font-size: 62.5%;
+}
+@media only screen and (max-width:56.25em){
+    html{font-size: 50%;}
+}
+body{
+    background-color: var(--color-white);
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--color-primary);
+    padding: 10rem 0;
+}
+
+@media only screen and (max-width:56.25em){
+    body{padding: 6rem 0;}
+}
+
+
+/*----------START CONTAINER-------*/
+.container{
+    width: 80%;
+    margin: 0 auto;
+    
+}
+@media only screen and (max-width:56.25em){
+    .container{width: 90%;}
+}
+
+
+.header{
+    display: flex;
+}
+@media only screen and (max-width:40.62em){
+    .header{flex-direction: column;}
+}
+.header__article{
+    flex: 0 0 35%;
+}
+@media only screen and (max-width:40.62em){
+    .header__article{
+        margin-bottom: 3rem;
+    }
+}
+
+
+.header__stars{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.header__stars--list{
+    list-style: none;
+    position: relative;
+    width: 58%;
+    font-weight: 700;
+}
+
+@media only screen and (max-width:56.25em){
+    .header__stars--list{
+        width: 65%;
+    }
+}
+@media only screen and (max-width:47.93em){
+    .header__stars--list{width: 75%;}
+}
+
+@media only screen and (max-width:40.62em){
+    .header__stars--list{
+        width: 100%;
+    }
+}
+.header__stars--item{
+    padding: 1.5rem 3rem;
+    border-radius: .4rem;
+    background-color: var(--color-secondary-light);
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+}
+@media only screen and (max-width:40.62em){
+    .header__stars--item{
+        position: static;
+        margin: 1.5rem 0;
+        padding: 1.3rem;
+    }
+}
+
+.header__stars--item > li > i{
+    color: gold;
+}
+
+.header__stars--item-1{
+    top: 2rem;
+    right: 8rem;
+}
+.header__stars--item-2{
+    top: 9rem;
+    right: 4rem;
+}
+
+.header__stars--item-3{
+    top: 16rem;
+    right: 0;
+}
+
+/*-----------------STORIES------------------*/
+.section__stories{
+    padding: 4rem 0;
+}
+
+.section__stories > .row{
+   display: flex;
+   flex-wrap: wrap;
+}
+@media only screen and (max-width:767px){
+    .section__stories > .row{
+        flex-direction: column;
+    }
+}
+
+.section__stories > .row .card{
+    position: relative;
+    border-radius: .5rem;
+    padding: 3rem;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    width: calc((100% - (2 * 4rem)) / 3);
+}
+
+
+.section__stories .card:not(:first-child){
+    margin-left: 4rem;
+}
+.section__stories .card-2{
+    top: 2rem;
+}
+.section__stories .card-3{
+    top: 4rem;
+}
+@media only screen and (max-width:767px){
+    .section__stories > .row .card{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/*----------The Card-----------*/
+.card .card__user{
+  display: flex;
+  margin-bottom: 2rem;
+}
+.card .card__user > img{
+    width: 4rem;
+    border-radius: 50%;
+}
+.card .card__user .card__heading{
+    margin-left: 3rem;
+    line-height: 1.4;
+    
+}
+.card .card__user .card__heading > span{
+    display: block;
+}
+.card .card__heading .card__verified{
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--color-pink);
+}
+.card q{
+    font-weight: 400;
+}
+/*-----------components-----------*/
+
+.heading-primary{
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: .9;
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width:650px){
+    .heading-primary{
+        font-size: 4rem;
+        
+    }
+}
